@@ -212,7 +212,7 @@ export default class InfiniteScroll extends Component {
       offset < Number(this.props.threshold) &&
       (el && el.offsetParent !== null)
     ) {
-      this.detachScrollListener();
+      //this.detachScrollListener(); Allow zero item retrieval
       this.beforeScrollHeight = parentNode.scrollHeight;
       this.beforeScrollTop = parentNode.scrollTop;
       // Call loadMore after detachScrollListener to allow for non-async loadMore functions
